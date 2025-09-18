@@ -16,8 +16,8 @@ with open(csv_file, newline='') as f:
     reader = csv.DictReader(f, delimiter=';')
     # print(reader.fieldnames)
     for row in reader:
-        login = row['login']
-        csv_password = row['password']
+        login = row['login'].strip()
+        csv_password = row['password'].strip()
 
         # Get password from MySQL
         if True:
